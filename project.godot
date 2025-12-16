@@ -14,6 +14,11 @@ config/name="Pou 3"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://singletons/GameManager.gd"
+ObjectMaker="*res://singletons/ObjectMaker.gd"
+
 [rendering]
 
 renderer/rendering_method="mobile"
