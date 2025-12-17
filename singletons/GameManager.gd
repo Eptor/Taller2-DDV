@@ -1,6 +1,6 @@
 extends Node
 @export var initial_lives: int = 2
-
+@export var initial_points: int = 0
 var score: int = 0
 var lives: int = 0
 var is_game_active: bool = true
@@ -14,6 +14,8 @@ func _ready() -> void:
 	SignalManager.on_restar_game.connect(reset_game)
 
 func reset_game() -> void:
+	score = 0
+	lives = initial_lives
 	get_tree().paused = false
 	get_tree().change_scene_to_packed(main_menu_scene)
 
@@ -39,4 +41,6 @@ func lose_life() -> void:
 
 func die() -> void:
 	#is_game_active = false
+	lives = initial_lives
+	score = 0
 	SignalManager.on_player_defeated.emit()
