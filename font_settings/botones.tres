@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cx1dvsjexfbcm"]
+
+[ext_resource type="FontFile" uid="uid://ypjveu3kx0po" path="res://assets/text_fonts/ARCADECLASSIC.TTF" id="1_yyai8"]
+
+[resource]
+font = ExtResource("1_yyai8")
+font_size = 60
+font_color = Color(0.047058824, 0.4392157, 0.9529412, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)

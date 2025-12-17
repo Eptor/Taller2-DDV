@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxbfqnwkcypma"]
+
+[ext_resource type="LabelSettings" uid="uid://bcjvianp5l1i5" path="res://font_settings/hud.tres" id="1_c0cnr"]
+[ext_resource type="Script" uid="uid://demfnioeoi85j" path="res://scenes/HUD/hud.gd" id="1_glunx"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_glunx")
+
+[node name="Score" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -192.0
+offset_right = -9.0
+offset_bottom = 67.0
+grow_horizontal = 0
+
+[node name="ScoreLabel" type="Label" parent="Score"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Score: 0"
+label_settings = ExtResource("1_c0cnr")
+
+[node name="Life" type="MarginContainer" parent="."]
+offset_top = 10.0
+offset_right = 137.0
+offset_bottom = 62.0
+
+[node name="LifeLabel" type="Label" parent="Life"]
+layout_mode = 2
+text = "❤️ x 3"
+label_settings = ExtResource("1_c0cnr")

@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1bh4h6n54qjw"]
+
+[ext_resource type="FontFile" uid="uid://ypjveu3kx0po" path="res://assets/text_fonts/ARCADECLASSIC.TTF" id="1_3j056"]
+[ext_resource type="Script" uid="uid://bxk6bvnfedove" path="res://scenes/game_over/game_over.gd" id="1_sseyc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sseyc"]
+font = ExtResource("1_3j056")
+font_size = 120
+font_color = Color(0, 0.57254905, 0.15294118, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0.7058824, 0.14117648, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3j056"]
+font = ExtResource("1_3j056")
+font_size = 40
+font_color = Color(0.3668956, 0.6148134, 0.9965469, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_sseyc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9928972, 0.27129525, 0.2629437, 0.23137255)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="GO" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "game over"
+label_settings = SubResource("LabelSettings_sseyc")
+horizontal_alignment = 1
+
+[node name="Continue" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "presiona espacio para continuar"
+label_settings = SubResource("LabelSettings_3j056")
+horizontal_alignment = 1

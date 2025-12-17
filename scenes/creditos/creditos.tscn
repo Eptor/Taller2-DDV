@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmi0q5tf0cl0t"]
+
+[ext_resource type="Script" uid="uid://bdw86q2tcuqua" path="res://scenes/creditos/creditos.gd" id="1_8pht3"]
+[ext_resource type="Texture2D" uid="uid://shewusril0v4" path="res://assets/backgrounds/menu_back.png" id="2_8pht3"]
+[ext_resource type="FontFile" uid="uid://ypjveu3kx0po" path="res://assets/text_fonts/ARCADECLASSIC.TTF" id="2_s4lej"]
+[ext_resource type="Texture2D" uid="uid://d1r2s4eupcb3o" path="res://assets/buttons/platano.png" id="3_i21c6"]
+[ext_resource type="Texture2D" uid="uid://n5k41ks3l4v4" path="res://assets/buttons/platano_hover.png" id="4_8pht3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3qrd"]
+font = ExtResource("2_s4lej")
+font_size = 60
+font_color = Color(0.9189592, 0.36369804, 0.031998284, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i21c6"]
+font = ExtResource("2_s4lej")
+font_size = 60
+font_color = Color(0.20179576, 0.51823115, 0.99119204, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8pht3"]
+font = ExtResource("2_s4lej")
+font_size = 60
+font_color = Color(0.03794768, 0.5746104, 0, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Creditos" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8pht3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_8pht3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Jonathan Axel Granados Hernandez"
+label_settings = SubResource("LabelSettings_c3qrd")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Hector leal espinoza"
+label_settings = SubResource("LabelSettings_i21c6")
+horizontal_alignment = 1
+
+[node name="RegresarMenu" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_i21c6")
+texture_hover = ExtResource("4_8pht3")
+
+[node name="Label" type="Label" parent="VBoxContainer/RegresarMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Regresar"
+label_settings = SubResource("LabelSettings_8pht3")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/RegresarMenu" to="." method="_on_regresar_menu_pressed"]

@@ -1,18 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://mu7vvphov42x"]
+[gd_scene load_steps=6 format=3 uid="uid://mu7vvphov42x"]
 
-[ext_resource type="Texture2D" uid="uid://dhqcwwkao6gy3" path="res://assets/backgrounds/main_level.png" id="1_8e00y"]
+[ext_resource type="Texture2D" uid="uid://qsqfy2ltfmcv" path="res://assets/backgrounds/rest.png" id="1_812nd"]
 [ext_resource type="PackedScene" uid="uid://didpnx0nfntr6" path="res://scenes/objects/spawner.tscn" id="2_rqn6l"]
 [ext_resource type="PackedScene" uid="uid://cqhq3k6t0xuwa" path="res://scenes/player/player.tscn" id="3_48npw"]
+[ext_resource type="PackedScene" uid="uid://cxbfqnwkcypma" path="res://scenes/HUD/hud.tscn" id="4_6gy0k"]
+[ext_resource type="PackedScene" uid="uid://c1bh4h6n54qjw" path="res://scenes/game_over/game_over.tscn" id="5_812nd"]
 
 [node name="MainLevel" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 540.0
-offset_bottom = 360.0
-texture = ExtResource("1_8e00y")
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 1246.0
+offset_bottom = 701.0
+texture = ExtResource("1_812nd")
 stretch_mode = 3
 
 [node name="Spawner" parent="." instance=ExtResource("2_rqn6l")]
 
 [node name="Player" parent="." instance=ExtResource("3_48npw")]
 position = Vector2(320, 327)
+
+[node name="Hud" parent="." instance=ExtResource("4_6gy0k")]
+
+[node name="GameOver" parent="." instance=ExtResource("5_812nd")]
