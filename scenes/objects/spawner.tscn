@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://didpnx0nfntr6"]
+
+[ext_resource type="Script" uid="uid://dc1wjb6iy4kvy" path="res://scenes/objects/spawner.gd" id="1_lkrw2"]
+[ext_resource type="PackedScene" uid="uid://bvrvefstmrdk3" path="res://scenes/objects/fruit.tscn" id="2_jobsr"]
+[ext_resource type="PackedScene" uid="uid://di5r13psvxywp" path="res://scenes/objects/spike.tscn" id="3_8h2fj"]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_lkrw2")
+object_templates = Array[PackedScene]([ExtResource("2_jobsr"), ExtResource("3_8h2fj")])
+
+[node name="Timer" type="Timer" parent="."]
