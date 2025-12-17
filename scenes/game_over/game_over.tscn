@@ -20,6 +20,7 @@ outline_size = 16
 outline_color = Color(0, 0, 0, 1)
 
 [node name="GameOver" type="CanvasLayer"]
+process_mode = 3
 visible = false
 script = ExtResource("1_sseyc")
 

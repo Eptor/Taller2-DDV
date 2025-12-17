@@ -7,6 +7,7 @@ func _ready():
 
 
 func _process(delta):
+	
 	if(Input.is_action_just_pressed("continuar") and can_return_to_menu):
 		SignalManager.on_restar_game.emit()
 
