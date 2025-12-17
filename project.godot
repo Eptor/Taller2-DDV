@@ -23,6 +23,7 @@ SignalManager="*res://singletons/SignalManager.gd"
 
 [display]
 
+window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
 [input]

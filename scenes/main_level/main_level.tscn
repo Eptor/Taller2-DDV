@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://mu7vvphov42x"]
 
+[ext_resource type="Texture2D" uid="uid://qsqfy2ltfmcv" path="res://assets/backgrounds/rest.png" id="1_812nd"]
 [ext_resource type="Script" uid="uid://ds1wvjhkuy5ud" path="res://scenes/main_level/main_level.gd" id="1_viwm5"]
 [ext_resource type="PackedScene" uid="uid://didpnx0nfntr6" path="res://scenes/objects/spawner.tscn" id="2_rqn6l"]
-[ext_resource type="PackedScene" uid="uid://byeciilnvrmsu" path="res://scenes/fondo_pro.tscn" id="2_viwm5"]
 [ext_resource type="PackedScene" uid="uid://cqhq3k6t0xuwa" path="res://scenes/player/player.tscn" id="3_48npw"]
 [ext_resource type="PackedScene" uid="uid://cxbfqnwkcypma" path="res://scenes/HUD/hud.tscn" id="4_6gy0k"]
 [ext_resource type="PackedScene" uid="uid://c1bh4h6n54qjw" path="res://scenes/game_over/game_over.tscn" id="5_812nd"]
@@ -10,11 +10,13 @@
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_viwm5")
 
-[node name="FondoPro" parent="." instance=ExtResource("2_viwm5")]
-offset_left = -70.0
-offset_top = -47.0
-offset_right = 1276.0
-offset_bottom = 754.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_812nd")
 
 [node name="Spawner" parent="." instance=ExtResource("2_rqn6l")]
 
