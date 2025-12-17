@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://p80j7ng8rds"]
+
+[ext_resource type="Texture2D" uid="uid://dhqcwwkao6gy3" path="res://assets/backgrounds/main_level.png" id="1_8e00y"]
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 540.0
+offset_bottom = 360.0
+texture = ExtResource("1_8e00y")
+stretch_mode = 3
