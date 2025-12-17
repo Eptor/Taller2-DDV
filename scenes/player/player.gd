@@ -20,7 +20,10 @@ func _physics_process(delta):
 	# Lógica básica para mover solo a los lados (Cesta/Personaje)
 	var direction = Input.get_axis("left", "right")
 	if direction:
-		velocity.x = direction * SPEED
+		if(Input.is_action_pressed("dash")):
+			velocity.x = direction * SPEED * 3
+		else :
+			velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
@@ -28,6 +31,10 @@ func _physics_process(delta):
 	velocity.y = 0
 
 	move_and_slide()
+	
+	var screen_width = get_viewport_rect().size.x
+	global_position.x = clamp(global_position.x, 0, screen_width)
+
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

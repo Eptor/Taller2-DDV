@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfbas1tei8sk8"
+path="res://.godot/imported/Charlie's Here - Pizza Parlor  Club Penguin OST.mp3-2a5c833f5c6790debd15001131ccd0e5.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Charlie's Here - Pizza Parlor  Club Penguin OST.mp3"
+dest_files=["res://.godot/imported/Charlie's Here - Pizza Parlor  Club Penguin OST.mp3-2a5c833f5c6790debd15001131ccd0e5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
