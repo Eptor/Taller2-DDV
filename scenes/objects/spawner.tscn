@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dc1wjb6iy4kvy" path="res://scenes/objects/spawner.gd" id="1_lkrw2"]
 [ext_resource type="PackedScene" uid="uid://bvrvefstmrdk3" path="res://scenes/objects/fruit.tscn" id="2_jobsr"]
-[ext_resource type="PackedScene" uid="uid://di5r13psvxywp" path="res://scenes/objects/spike.tscn" id="3_8h2fj"]
+[ext_resource type="PackedScene" uid="uid://di5r13psvxywp" path="res://scenes/objects/bomb.tscn" id="3_jobsr"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_lkrw2")
-object_templates = Array[PackedScene]([ExtResource("2_jobsr"), ExtResource("3_8h2fj")])
+object_templates = Array[PackedScene]([ExtResource("2_jobsr"), ExtResource("3_jobsr")])
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0

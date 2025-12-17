@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://di5r13psvxywp"]
-
-[ext_resource type="PackedScene" uid="uid://ck0g4f7di8gan" path="res://scenes/objects/falling_object_base.tscn" id="1_htn6p"]
-[ext_resource type="Script" uid="uid://b1hup6lxghugd" path="res://scenes/objects/spike.gd" id="2_ctypd"]
-
-[node name="Spike" instance=ExtResource("1_htn6p")]
-script = ExtResource("2_ctypd")

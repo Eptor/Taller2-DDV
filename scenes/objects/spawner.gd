@@ -26,9 +26,11 @@ func spawn_object() -> void:
 	
 	var margin = 50.0
 	var random_x = randf_range(margin, _screen_size.x - margin)
-	var spawn_pos = Vector2(random_x, -60) # -60 para que nazca fuera de cámara
+	var spawn_pos = Vector2(random_x, 0) # -60 para que nazca fuera de cámara
 	
 	add_child(instance)
 	
 	if instance.has_method("initialize"):
+		print(spawn_pos)
+		
 		instance.initialize(spawn_pos, 1.0)

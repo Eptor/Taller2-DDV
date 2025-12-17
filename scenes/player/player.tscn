@@ -1,12 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://clcipo7808lro"]
+[gd_scene load_steps=5 format=3 uid="uid://cqhq3k6t0xuwa"]
 
 [ext_resource type="Script" uid="uid://b45rhstswpa1t" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="Texture2D" uid="uid://dn3e15784tmi1" path="res://assets/player/Pou.png" id="2_dovo2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmlin"]
+radius = 315.03967
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dovo2"]
+radius = 383.0013
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_8afob")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dovo2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gmlin")
 
 [node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dovo2")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
