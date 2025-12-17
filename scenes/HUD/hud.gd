@@ -7,6 +7,7 @@ extends CanvasLayer
 func _ready():
 	SignalManager.on_life_update.connect(update_life)
 	SignalManager.on_score_update.connect(update_score)
+	SignalManager.on_set_lives.connect(set_lives)
 
 func _process(delta):
 	pass
@@ -16,3 +17,7 @@ func update_score(new_score: int):
 
 func update_life(new_life: int):
 	life_label.text = "❤️ x " + str(new_life)
+
+func set_lives(initial_lives: int):
+	print("Llamada al niga")
+	life_label.text = "❤️ x " + str(initial_lives)

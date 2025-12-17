@@ -21,6 +21,10 @@ GameManager="*res://singletons/GameManager.gd"
 ObjectMaker="*res://singletons/ObjectMaker.gd"
 SignalManager="*res://singletons/SignalManager.gd"
 
+[display]
+
+window/stretch/scale_mode="integer"
+
 [input]
 
 left={

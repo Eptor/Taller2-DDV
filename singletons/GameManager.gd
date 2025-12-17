@@ -1,10 +1,12 @@
 extends Node
-@export var initial_lives: int = 1
+@export var initial_lives: int = 2
 
 var score: int = 0
-var lives: int = 3
+var lives: int = 0
 var is_game_active: bool = true
 var main_menu_scene: PackedScene = load("res://scenes/menu/menu.tscn")
+
+@onready var dashboard: PackedScene = load("res://scenes/HUD/hud.tscn")
 
 func _ready() -> void:
 	score = 0
